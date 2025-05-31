@@ -1,0 +1,285 @@
+body {
+    font-family: 'Arial', sans-serif;
+    /* background-color: #fde2e2;  Antigo rosa clarinho */
+    background-color: #FFF7F7; /* NOVO: Branco levemente rosado */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: relative;
+}
+
+header {
+     background-color: #CC0000; /* NOVO: Vermelho vibrante */
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    padding: 10px 20px;
+}
+
+.mensagem p {
+    font-size: 1.2em;
+    /* color: #5c3333; Antigo */
+    color: #583030;
+}
+
+.contador {
+    /* background-color: #fff0f0; Antigo */
+    background-color: #FEF0F0; /* NOVO: Rosa muito, muito claro, quase branco */
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 500px;
+}
+
+.contador h2 {
+    /* color: #d16060; Antigo */
+    color: #CC0000; /* NOVO: Vermelho vibrante */
+}
+
+#tempoJuntos {
+    font-size: 1.5em;
+    font-weight: bold;
+    /* color: #c25050; Antigo */
+    color: #B30000; /* NOVO: Tom de vermelho um pouco mais escuro para destaque */
+}
+
+.fotos {
+    margin-top: 30px;
+}
+
+.fotos h2 {
+    color: #CC0000;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Espaço entre as fotos */
+}
+
+.galeria img {
+    max-width: 300px; /* Tamanho máximo das fotos */
+    max-height: 300px;
+    object-fit: contain; /* Faz a imagem inteira caber na área, mantendo proporção */
+    object-position: center; /* Centraliza a imagem na área */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+footer {
+     background-color: #CC0000; /* NOVO: Vermelho vibrante */
+    color: white;
+    padding: 15px;
+    margin-top: 30px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.botao-musica {
+    /* background-color: #e97575; Antigo */
+    background-color: #6b0000; /* NOVO: Vermelho vibrante */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+.botao-musica:hover {
+    /* background-color: #d16060; Antigo */
+    background-color: #A30000
+}
+body {
+    /* Mantenha seus estilos de body existentes (font-family, color, margin, padding, text-align) */
+    /* A cor de fundo do body (#fde2e2) será coberta pelo container-fotos-fundo,
+       mas é bom manter caso algo dê errado com o container. */
+    position: relative; /* Ajuda a gerenciar o contexto de empilhamento para z-index */
+}
+
+.container-fotos-fundo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    /* background-color: #fde2e2; Antigo rosa clarinho */
+    background-color: #FFF7F7
+}
+
+.foto-espalhada {
+    position: absolute; /* Posicionada dentro do .container-fotos-fundo */
+    background-size: cover; /* Ou 'contain', ou defina width/height específicos */
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.5; /* Ajuste este valor para o "fade" (0.1 = muito transparente, 0.3 = menos transparente) */
+    /* Não defina width, height, top, left, background-image ou transform aqui,
+       faremos isso para cada foto individualmente abaixo. */
+}
+
+/* --- Estilos individuais para cada foto de fundo --- */
+/* Você precisará ajustar os valores de width, height, top, left, transform e background-image para cada foto */
+
+#bg-foto1 {
+    background-image: url('imagens/bg-foto1.jpg'); /* Substitua pelo nome da sua primeira foto de fundo */
+    width: 250px;   /* Largura da foto no fundo */
+    height: 300px;  /* Altura da foto no fundo */
+    top: 5%;        /* Distância do topo da página */
+    left: 10%;      /* Distância da esquerda da página */
+    transform: rotate(-10deg); /* Rotação da foto (opcional) */
+}
+
+#bg-foto2 {
+    background-image: url('imagens/bg-foto2.jpg'); /* Substitua pelo nome da sua segunda foto de fundo */
+    width: 300px;
+    height: 330px;
+    top: 15%;
+    right: 15%; /* Pode usar 'right' em vez de 'left' */
+    /* left: auto; (se usar right, defina left como auto ou não defina) */
+    transform: rotate(8deg);
+}
+
+#bg-foto3 {
+    background-image: url('imagens/bg-foto3.jpg'); /* Substitua pelo nome da sua terceira foto de fundo */
+    width: 200px;
+    height: 280px;
+    bottom: 10%; /* Pode usar 'bottom' em vez de 'top' */
+    right: 5%;
+    transform: rotate(5deg);
+}
+#bg-foto4 {
+    background-image: url('imagens/bg-foto4.jpg'); /* Substitua pelo nome da sua terceira foto de fundo */
+    width: 200px;
+    height: 280px;
+    bottom: 10%; /* Pode usar 'bottom' em vez de 'top' */
+    left: 5%;
+    transform: rotate(5deg);
+}
+.coracao-chuva {
+    position: fixed; /* Posição fixa na tela */
+    top: -30px;      /* Começa um pouco acima da tela (ajuste conforme o tamanho do coração) */
+    font-size: 20px; /* Tamanho base do coração, será variado no JS */
+    pointer-events: none; /* Para não atrapalhar cliques em outros elementos */
+    user-select: none;    /* Para não deixar selecionar o texto do coração */
+    z-index: 999;         /* Para ficar por cima da maioria dos elementos */
+    
+    /* A cor será a do emoji por padrão, mas você pode descomentar a linha abaixo para forçar uma cor */
+    /* color: #FF69B4; /* Exemplo: Rosa choque. Ou use um dos seus vermelhos: #CC0000 */
+
+    /* Animação de queda - a duração será definida pelo JavaScript */
+    animation-name: cair;
+    animation-timing-function: linear;
+    animation-iteration-count: 1; /* A animação ocorre uma vez por coração */
+}
+
+@keyframes cair {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(105vh); /* Cai até um pouco abaixo da altura da tela */
+        opacity: 0; /* Desaparece suavemente no final */
+    }
+}
+@media (max-width: 600px) { /* Aplica estes estilos se a largura da tela for 600px ou menos */
+
+    /* Ajustes no Cabeçalho */
+    header h1 {
+        font-size: 1.8em; /* Reduz um pouco o tamanho do título principal */
+    }
+
+    .botao-musica {
+        font-size: 0.8em; /* Botão um pouco menor */
+        padding: 8px 12px;
+    }
+
+    /* Ajustes no Conteúdo Principal */
+    main {
+        padding: 10px 10px; /* Menos preenchimento lateral no conteúdo principal */
+    }
+
+    .mensagem p {
+        font-size: 1em; /* Texto da mensagem um pouco menor */
+    }
+
+    /* Ajustes na Seção do Contador */
+    .contador {
+        padding: 15px; /* Menos preenchimento interno no contador */
+        margin: 15px auto; /* Margem um pouco menor */
+    }
+
+    .contador h2 {
+        font-size: 1.3em; /* Título do contador menor */
+    }
+
+    #tempoJuntos {
+        font-size: 1.2em; /* Texto do tempo um pouco menor */
+        line-height: 1.5; /* Ajusta o espaçamento entre linhas se o texto quebrar */
+    }
+
+    /* Ajustes na Galeria de Fotos */
+    .fotos h2 {
+        font-size: 1.3em; /* Título da galeria menor */
+    }
+
+    .galeria img {
+        /* Para telas pequenas, podemos fazer as fotos ocuparem mais largura,
+           talvez 2 por linha ou até 1 por linha se forem muito pequenas.
+           Exemplo para 2 fotos por linha com um pequeno espaço: */
+        width: calc(50% - 10px); /* Ocupa quase metade da largura, menos um espacinho */
+        height: auto; /* Altura automática para manter proporção com object-fit */
+        /* Se quiser manter quadrado com object-fit: cover, você precisaria de uma altura calculada
+           ou um valor fixo menor, por exemplo:
+           width: 130px;
+           height: 130px;
+        */
+
+        /* Se você usou width e height fixas antes com object-fit: cover, ajuste para valores menores: */
+        /* Exemplo se antes era 300x300: */
+        /* width: 140px; */
+        /* height: 140px; */
+    }
+    /* Se as fotos de fundo espalhadas (.foto-espalhada) parecerem muito grandes ou fora do lugar
+       no mobile, você também pode ajustar o width, height, top, left delas aqui: */
+    /*
+    #bg-foto1 {
+        width: 150px;
+        height: 180px;
+        top: 3%;
+        left: 2%;
+        transform: rotate(-5deg);
+    }
+    E assim por diante para #bg-foto2, #bg-foto3...
+    */
+
+    /* Rodapé */
+    footer {
+        font-size: 0.9em; /* Texto do rodapé um pouco menor */
+    }
+}
+
+/* Você pode adicionar mais breakpoints se precisar, por exemplo, para tablets: */
+/*
+@media (max-width: 768px) {
+    // Estilos para telas até 768px de largura
+}
+*/
